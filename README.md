@@ -1,6 +1,25 @@
 # KaTeX Physics for Markdown
 Markdownファイル内での数式入力を簡潔にするためのVSCode拡張機能。
 
+## インストール方法
+
+### 方法1: VSIXファイルから手動インストール
+1. リポジトリをクローンまたはダウンロード
+2. ターミナルで以下を実行してビルド:
+   ```bash
+   npm install
+   npm run compile
+   npm run package
+   ```
+3. 生成された `katex-physics-for-markdown-0.0.1.vsix` を VS Code でインストール:
+   - VS Code のコマンドパレット（Ctrl+Shift+P）を開く
+   - 「Extensions: Install from VSIX...」を選択
+   - 生成された `.vsix` ファイルを選択
+
+### 方法2: 開発モードで実行
+1. VS Code でこのフォルダを開く
+2. `F5` キーを押して拡張機能開発ホストを起動
+
 ## 概要
 このVSCode拡張機能は、Markdown内で数式を編集する際に、物理表記（ベクトル、テンソル、微分記法など）を手早く挿入・展開するためのコマンドとスニペットを提供する。
 

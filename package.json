@@ -1,7 +1,12 @@
 {
-  "name": "KaTeX Physics for Markdown",
+  "name": "katex-physics-for-markdown",
   "displayName": "KaTeX Physics for Markdown",
-  "description": "",
+  "publisher": "hhayasaka25",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HHayasaka25/KaTeX-Physics-for-Markdown"
+  },
+  "description": "KaTeX physics notation helper for Markdown - expands macros like \\dv, \\pdv, \\qty with automatic delimiter detection",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.80.0" 
@@ -9,9 +14,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:my-katex-helper.expandMacros"
-  ],
+  "activationEvents": ["*"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -28,6 +31,7 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js"
+    ,"package": "npx vsce package --allow-star-activation"
   },
   "devDependencies": {
     "@types/vscode": "^1.80.0",
